@@ -1,0 +1,72 @@
+@import "./mixin";
+@keyframes scale {
+    0% {
+        transform: scale(0.5);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.auth {
+    @include full();
+    @include flex();
+
+    .auth__card {
+        @include flex(space-between);
+        @include shadow();
+        background-color: white;
+        padding: 30px;
+        transform: scale(0.5);
+        min-height: 225px;
+        animation: scale 0.5s ease-in-out forwards;
+        text-align: center;
+        input,
+        button {
+            width: 250px;
+            margin: 5px 0;
+            &.auth__login {
+                background-color: rgb(34, 177, 129);
+                color: white;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    background-color: rgb(48, 194, 145);
+                }
+            }
+        }
+        h1 {
+            font-size: 1.75rem;
+            margin: 0 0 20px;
+        }
+        input {
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+        button {
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            @include flex($direct: row);
+            svg {
+                font-size: 1.5rem;
+                margin-left: 15px;
+            }
+            &.auth__github {
+                color: white;
+                background-color: black;
+            }
+        }
+        .auth__message {
+            text-align: center;
+            color: rgb(34, 177, 129);
+            margin: 0;
+            padding: 10px;
+            font-weight: 500;
+            font-size: 1.2rem;
+            max-width: 175px;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}

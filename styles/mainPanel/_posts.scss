@@ -1,0 +1,37 @@
+.posts {
+    // margin-top: 100px;
+    max-width: 900px;
+    width: 100%;
+    @include maxmargin(900px);
+    @media (max-width: 1200px) {
+        margin-top: 20px;
+    }
+    form,
+    textarea,
+    button {
+        width: 100%;
+        textarea {
+            min-height: 90px;
+        }
+    }
+    .onePost {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white;
+        @include shadow();
+        overflow-wrap: break-word;
+        h1 {
+            img {
+                margin-right: 15px;
+                width: 75px;
+                object-fit: cover;
+                transition: all 0.3s ease 0.2s;
+                &:hover {
+                    transform: scale(5);
+                }
+            }
+            @include flex($justify: flex-start, $direct: row);
+        }
+    }
+    margin-bottom: 75px;
+}

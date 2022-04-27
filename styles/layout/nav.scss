@@ -1,0 +1,31 @@
+.nav {
+    background-color: white;
+    @include shadow();
+    @include flex(space-around, $direct: row);
+    min-height: 65px;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    a {
+        font-size: 1.4rem;
+        font-weight: 600;
+        &:hover {
+            color: rgb(34, 177, 129);
+            cursor: pointer;
+        }
+    }
+    .nav__image {
+        width: 50px;
+        cursor: pointer;
+    }
+    .nav__exit {
+        height: 40px;
+        transform: scale(1.5);
+        @include flex();
+        &:hover {
+            color: rgb(34, 177, 129);
+            cursor: pointer;
+        }
+    }
+}

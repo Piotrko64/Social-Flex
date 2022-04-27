@@ -1,0 +1,100 @@
+.profile {
+    background-color: white;
+    @include shadow();
+    @include flex();
+    padding: 20px;
+
+    max-width: 250px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 100px;
+    @media (max-width: 1200px) {
+        position: static;
+        margin-top: 100px;
+        @include flex();
+    }
+    h1 {
+        font-size: 1.5rem;
+        color: rgb(4, 163, 110);
+    }
+    &__countPosts {
+        @include flex();
+        margin-bottom: 20px;
+        div {
+            margin: 10px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        span {
+            font-weight: 400;
+            font-size: 1.75rem;
+        }
+    }
+    .profile__img {
+        background-color: rgb(34, 177, 129);
+        width: 200px;
+        height: 200px;
+        img {
+            height: 200px;
+            width: 200px;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+        .nameLetter {
+            @include flex();
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin: 0;
+            height: 100%;
+            color: white;
+        }
+    }
+
+    @include flex();
+    .custom-file-input {
+        color: transparent;
+        max-width: 220px;
+        min-height: 55px;
+    }
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    .custom-file-input::before {
+        content: "Change profile picture";
+        color: rgb(255, 255, 255);
+        z-index: 1;
+        background: rgb(34, 177, 129);
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.1em;
+    }
+    .custom-file-input:hover::before {
+        border-color: green;
+    }
+    .custom-file-input:active {
+        outline: 0;
+    }
+    .custom-file-input:active::before {
+        background: green;
+    }
+    .upload,
+    .logout {
+        margin: 15px 0;
+        padding: 5px 8px;
+        background-color: rgb(7, 76, 202);
+        color: white;
+        border: none;
+        font-size: 1.1em;
+        cursor: pointer;
+        width: 150px;
+    }
+    .logout {
+        background-color: rgb(190, 69, 21);
+    }
+}

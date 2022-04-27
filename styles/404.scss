@@ -1,0 +1,26 @@
+.notFound {
+    @include flex();
+    height: 100vh;
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    button {
+        width: 250px;
+        margin: 5px 0;
+        border: none;
+        font-size: 1.5rem;
+        background-color: rgb(34, 177, 129);
+        color: white;
+        transition: all 0.2s ease-in-out;
+        padding: 10px;
+        cursor: pointer;
+        @include flex();
+        &:hover {
+            background-color: rgb(48, 194, 145);
+        }
+    }
+}

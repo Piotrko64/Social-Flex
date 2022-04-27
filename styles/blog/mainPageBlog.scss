@@ -1,0 +1,22 @@
+.mainPageBlog {
+    @include flex($direct: row);
+    margin-top: 75px;
+    article {
+        width: 300px;
+        background-color: white;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 40px;
+        @include shadow();
+        .image {
+            img {
+                object-fit: cover;
+                max-width: 284px;
+            }
+        }
+
+        button {
+            cursor: pointer;
+        }
+    }
+}

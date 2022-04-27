@@ -1,0 +1,4 @@
+.mainContent {
+    @include flex(space-between, flex-start, $direct: row);
+    @include maxmargin();
+}

@@ -1,0 +1,9 @@
+@import "./profile";
+@import "./posts";
+.mainContent {
+    @media (max-width: 1200px) {
+        @include flex($direct: column);
+        margin-top: 0px;
+    }
+    margin-top: 120px;
+}

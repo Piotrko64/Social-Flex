@@ -1,0 +1,16 @@
+.pageDetail {
+    @include maxmargin(800px);
+    @include shadow();
+    margin-top: 45px;
+    background-color: white;
+    min-height: 100vh;
+    .image {
+        max-width: 800px;
+        img {
+            width: 100%;
+        }
+    }
+    section {
+        padding: 10px;
+    }
+}
