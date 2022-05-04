@@ -29,6 +29,8 @@
 
 -   [What have I learned from this project](#what-have-i-learned-from-this-project)
 
+-   [Updating](#updating)
+
 <br />
 
 # Instalation
