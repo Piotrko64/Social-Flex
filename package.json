@@ -6,7 +6,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "cy:open": "npx cypress open",
+        "cy:run": "concurrently --kill-others \"npm run dev\" \"npm run cy:open\""
     },
     "dependencies": {
         "@emotion/react": "^11.9.0",
@@ -15,6 +17,8 @@
         "@next-auth/mongodb-adapter": "^0.0.2-next.298",
         "axios": "^0.26.1",
         "bcryptjs": "^2.4.3",
+        "concurrently": "^7.1.0",
+        "cypress": "^9.6.0",
         "emoji-picker-react": "^3.5.1",
         "firebase": "^9.6.11",
         "formik": "^2.2.9",
