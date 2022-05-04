@@ -1,4 +1,4 @@
-# <p align="center">[Social Flex](https://sf-for-others-kurlc1q6r-piotrko64.vercel.app)</p>
+# <p align="center">[Social Flex](https://sf-for-others-77q457ss0-piotrko64.vercel.app)</p>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/165108072-8531db71-9b50-4add-bf60-53023cd03cae.png" title="logoSF" alt="logo"/></p>
 
