@@ -2,7 +2,7 @@ describe("Testing SF!", () => {
     beforeEach(() => {
         cy.wait(2000);
     });
-    // Add new note
+
     it("Visit", () => {
         // viewport for mobile
         cy.viewport("samsung-s10");
@@ -17,6 +17,7 @@ describe("Testing SF!", () => {
         cy.wait(6000);
         cy.get(".auth__card").should("not.exist");
         cy.getCookie("next-auth.session-token").should("exist");
+        cy.contains("Blog");
     });
 
     it("Post add", () => {
