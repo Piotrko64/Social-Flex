@@ -1,4 +1,4 @@
-# <p align="center">[Social Flex](https://sf-for-others-kurlc1q6r-piotrko64.vercel.app)</p>
+# <p align="center">[Social Flex](https://sf-for-others-77q457ss0-piotrko64.vercel.app)</p>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/165108072-8531db71-9b50-4add-bf60-53023cd03cae.png" title="logoSF" alt="logo"/></p>
 
@@ -28,6 +28,8 @@
 -   [Inspiration](#inspiration)
 
 -   [What have I learned from this project](#what-have-i-learned-from-this-project)
+
+-   [Updating](#updating)
 
 <br />
 
@@ -89,3 +91,9 @@ If you are login you can visit Blog...Blog? But why blog in this kind app? Answe
 -   Create simple Nextjs project with authorizations
 -   Use Firebase to storage images (I also learned how use Multer but using only Firebase will better and problemless)
 -   Connect DatoCMS with NextJS
+
+# Updating
+
+## 04.05.2022
+ - add emoji picker ( - next/dynamic will be helpful because emoji picker using document object) 
+ - add message about state of upload image
