@@ -94,6 +94,7 @@ const AddPosts = () => {
                         />
                     </div>
                 </div>
+                {error}
                 <button type="submit" ref={submit}>
                     Send
                 </button>
