@@ -16,7 +16,7 @@ describe("Testing SF!", () => {
         cy.get(".auth__card").contains("Loading...").should("exist");
         cy.wait(6000);
         cy.get(".auth__card").should("not.exist");
-        cy.getCookie("next-auth.session-token").should("exist");
+
         cy.contains("Blog");
     });
 
