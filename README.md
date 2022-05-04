@@ -29,6 +29,8 @@
 
 -   [What have I learned from this project](#what-have-i-learned-from-this-project)
 
+-   [Testing](#testing)
+
 -   [Updating](#updating)
 
 <br />
@@ -91,6 +93,14 @@ If you are login you can visit Blog...Blog? But why blog in this kind app? Answe
 -   Create simple Nextjs project with authorizations
 -   Use Firebase to storage images (I also learned how use Multer but using only Firebase will better and problemless)
 -   Connect DatoCMS with NextJS
+
+# Testing
+
+### For testing e2e I use Cypress
+
+> To run test for SF you need write ** npm run cy:run ** in console.
+
+> Remember about **npm install** before
 
 # Updating
 
