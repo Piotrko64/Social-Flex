@@ -89,3 +89,9 @@ If you are login you can visit Blog...Blog? But why blog in this kind app? Answe
 -   Create simple Nextjs project with authorizations
 -   Use Firebase to storage images (I also learned how use Multer but using only Firebase will better and problemless)
 -   Connect DatoCMS with NextJS
+
+# Updating
+
+## 04.05.2022
+ - add emoji picker ( - next/dynamic will be helpful because emoji picker using document object) 
+ - add message about state of upload image
