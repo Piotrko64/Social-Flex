@@ -1,9 +1,11 @@
 import { useContext, useRef, useState } from "react";
 import UserInfoContext from "../../../store/user-data";
 import toast from "react-hot-toast";
-
 import { useFetchData } from "../../../lib/customHooks/fetch-data";
 import axios from "axios";
+import { BsEmojiSmile } from "react-icons/bs";
+import dynamic from "next/dynamic";
+const Picker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 
 const AddPosts = () => {
     const submit = useRef(null);
@@ -13,6 +15,7 @@ const AddPosts = () => {
     useFetchData();
 
     const [error, setError] = useState("");
+    const [emojiActive, setEmojiActive] = useState(false);
 
     async function sendPost(e) {
         e.preventDefault();
@@ -56,6 +59,7 @@ const AddPosts = () => {
             .catch(() => toast.error("Something is wrong!"));
     }
     function handleKeyDown(e) {
+        setEmojiActive(false);
         if (!e.shiftKey && e.key == "Enter") {
             submit.current.click();
         }
@@ -63,13 +67,33 @@ const AddPosts = () => {
     function textAreaBlur() {
         setError("");
     }
+
+    const addEmoji = (event, emojiObject) => {
+        textArea.current.value += emojiObject.emoji;
+    };
+
     return (
         <>
             <form onSubmit={sendPost}>
-                <textarea onKeyPress={handleKeyDown} ref={textArea} onBlur={textAreaBlur}></textarea>
+                <div className="textarea-div">
+                    <textarea
+                        onKeyPress={handleKeyDown}
+                        ref={textArea}
+                        onBlur={textAreaBlur}
+                        onClick={() => {
+                            setEmojiActive(false);
+                        }}
+                    ></textarea>
 
-                {error}
-
+                    <div className="textarea-emoji">{emojiActive && <Picker onEmojiClick={addEmoji} />}</div>
+                    <div className="textarea-emojiActive">
+                        <BsEmojiSmile
+                            onClick={() => {
+                                setEmojiActive(!emojiActive);
+                            }}
+                        />
+                    </div>
+                </div>
                 <button type="submit" ref={submit}>
                     Send
                 </button>

@@ -9,7 +9,8 @@ import { v4 } from "uuid";
 const YourProfile = () => {
     const info = useContext(UserInfoContext);
     const [photo, setPhoto] = useState(null);
-    const [profilePicture, setProfilePicture] = useState(image || "");
+    const [situationPhoto, setSituationPhoto] = useState("");
+
     const { name, image } = info.data;
 
     async function changePhoto(e) {
@@ -25,7 +26,8 @@ const YourProfile = () => {
 
         const imageRef = ref(storage, namePhoto);
         await uploadBytes(imageRef, photo).then(() => {
-            alert("ready!!");
+            alert("ready!!!");
+            setSituationPhoto("Photo is ready");
         });
         await axios
             .post(
@@ -51,57 +53,19 @@ const YourProfile = () => {
                             secondary: "#FFFAEE",
                         },
                     });
+                setSituationPhoto("We got this!");
                 location.reload();
             })
             .catch(() => {
                 toast.error("Something was wrong :<");
+                setSituationPhoto("Problem with photo!");
             });
     };
 
-    // async function uploadPhoto() {
-    //     const fd = new FormData();
-    //     fd.append("image", photo);
-    //     fd.append("user", name);
-    //     await axios
-    //         .post("/api/user/changePhoto", fd, {
-    //             onUploadProgress: (progressEvent) => {
-    //                 console.log(progressEvent.loaded / progressEvent.total);
-    //             },
-    //         })
-
-    //         .then((res) => {
-    //             info.setData({ ...info.data, image: res.data.url }),
-    //                 toast.success("Picture was uploaded", {
-    //                     style: {
-    //                         border: "1px solid rgb(4, 163, 110)",
-    //                         padding: "16px",
-    //                         color: "rgb(4, 163, 110)",
-    //                     },
-    //                     iconTheme: {
-    //                         primary: "rgb(4, 163, 110)",
-    //                         secondary: "#FFFAEE",
-    //                     },
-    //                 });
-    //         })
-    //         .catch(() => {
-    //             toast.error("Something was wrong :<");
-    //         });
-    // }
     function countPosts() {
         return info.posts?.filter((e) => e.author === name).length;
     }
-    // useEffect(() => {
-    //     listAll(ref(storage, "/images")).then((res) => {
-    //         res.items.forEach((item) => {
-    //             if (item._location.path_ == info.data.image) {
-    //                 getDownloadURL(item).then((url) => {
-    //                     // setProfilePicture(url);
-    //                     info.setData({ ...info.data, image: url });
-    //                 });
-    //             }
-    //         });
-    //     });
-    // }, [info]);
+
     return (
         <aside className="profile">
             <div className="profile__img">
@@ -115,10 +79,6 @@ const YourProfile = () => {
                     <span>{countPosts()}</span>
                 </div>
             )}
-
-            {/* <button className="logout" onClick={() => signOut()}>
-                Logout
-            </button> */}
 
             <input
                 type="file"
