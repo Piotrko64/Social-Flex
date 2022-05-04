@@ -14,9 +14,12 @@
             min-height: 120px;
         }
     }
+    textarea {
+        min-width: 100%;
+    }
     .textarea-div {
         position: relative;
-        width: min-content;
+        width: 100%;
         .textarea-emoji,
         .textarea-emojiActive {
             position: absolute;
