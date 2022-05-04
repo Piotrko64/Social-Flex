@@ -14,6 +14,7 @@
 <img src="https://user-images.githubusercontent.com/77500425/165108419-8a1d2ae8-06f6-4815-a232-ff403de5cf72.png" alt="NextAuth"  height="50" align="center" title="NextAuth"/>
 <img src="https://user-images.githubusercontent.com/77500425/161313295-a11c936d-a0b3-4bb6-84c1-9ea3c459c3b8.png" alt="Mongo"  height="50" align="center"/>
 <img src="https://user-images.githubusercontent.com/77500425/165483039-a65ef61f-a3ae-4524-bfa5-04788dd894ea.png" alt="Firebase"  height="50" align="center"/>
+<img src="https://user-images.githubusercontent.com/77500425/166717116-f0e5fb2c-6afe-42b1-830d-8154da50bab0.png" alt="Cypress"  height="50" align="center"/>
 
 </div>
 
