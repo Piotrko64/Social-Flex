@@ -101,6 +101,9 @@ If you are login you can visit Blog...Blog? But why blog in this kind app? Answe
 - To run test for SF you need write ** npm run cy:run ** in console.
 - Remember about **npm install** before
 
+![image](https://user-images.githubusercontent.com/77500425/166716830-0d2dd463-4d87-495e-815f-f7ea3903080e.png)
+
+
 # Updating
 
 ## 04.05.2022
