@@ -14,6 +14,7 @@ const YourProfile = () => {
     const { name, image } = info.data;
 
     async function changePhoto(e) {
+        setSituationPhoto("Go Upload!");
         setPhoto(e.target.files[0]);
     }
 
@@ -22,11 +23,12 @@ const YourProfile = () => {
             return;
         }
 
+        setSituationPhoto("Wait...");
+
         const namePhoto = `images/${photo.name + v4()}`;
 
         const imageRef = ref(storage, namePhoto);
         await uploadBytes(imageRef, photo).then(() => {
-            alert("ready!!!");
             setSituationPhoto("Photo is ready");
         });
         await axios
@@ -87,14 +89,11 @@ const YourProfile = () => {
                 onChange={(e) => changePhoto(e)}
                 className="custom-file-input"
             />
-
+            {situationPhoto}
             {photo && (
-                <>
-                    Photo is ready!
-                    <button className="upload" onClick={uploadImage}>
-                        Upload!
-                    </button>
-                </>
+                <button className="upload" onClick={uploadImage}>
+                    Upload!
+                </button>
             )}
         </aside>
     );
