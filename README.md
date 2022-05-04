@@ -98,9 +98,8 @@ If you are login you can visit Blog...Blog? But why blog in this kind app? Answe
 
 ### For testing e2e I use Cypress
 
-> To run test for SF you need write ** npm run cy:run ** in console.
-
-> Remember about **npm install** before
+- To run test for SF you need write ** npm run cy:run ** in console.
+- Remember about **npm install** before
 
 # Updating
 
