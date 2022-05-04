@@ -11,7 +11,26 @@
     button {
         width: 100%;
         textarea {
-            min-height: 90px;
+            min-height: 120px;
+        }
+    }
+    .textarea-div {
+        position: relative;
+        width: min-content;
+        .textarea-emoji,
+        .textarea-emojiActive {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            @include flex();
+            svg {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+        .textarea-emoji {
+            bottom: -200px;
+            right: 45px;
         }
     }
     .onePost {
