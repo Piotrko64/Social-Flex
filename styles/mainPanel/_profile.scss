@@ -31,9 +31,6 @@
         }
     }
     .profile__img {
-        background-color: rgb(34, 177, 129);
-        width: 200px;
-        height: 200px;
         img {
             height: 200px;
             width: 200px;
@@ -41,11 +38,14 @@
             object-fit: cover;
         }
         .nameLetter {
+            background-color: rgb(34, 177, 129);
+            height: 200px;
+            width: 200px;
             @include flex();
             font-size: 4rem;
             text-transform: uppercase;
             margin: 0;
-            height: 100%;
+
             color: white;
         }
     }

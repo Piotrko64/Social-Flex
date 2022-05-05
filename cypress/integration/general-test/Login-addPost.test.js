@@ -1,22 +1,13 @@
+import Login from "../Login";
+
 describe("Testing SF!", () => {
     beforeEach(() => {
         cy.wait(2000);
     });
 
-    it("Visit", () => {
-        // viewport for mobile
-        cy.viewport("samsung-s10");
-        cy.visit("http://localhost:3000/");
-    });
-
     it("Login Type", () => {
-        cy.get("input").first().type("newFriend").should("have.value", "newFriend");
-        cy.get("input").eq(1).type("newFriend").should("have.value", "newFriend");
-        cy.get(".auth__login").click();
-        cy.get(".auth__card").contains("Loading...").should("exist");
-        cy.wait(6000);
+        Login();
         cy.get(".auth__card").should("not.exist");
-
         cy.contains("Blog");
     });
 
@@ -34,7 +25,7 @@ describe("Testing SF!", () => {
 
     it("Emoji", () => {
         cy.get(".textarea-emojiActive").should("exist").click();
-        // cy.get(".textarea-emoji").should("not.have.value", "");
+
         cy.get(".textarea-emoji > .emoji-picker-react").should("be.visible");
         cy.get("textarea").type("hide!");
         cy.get(".textarea-emoji > .emoji-picker-react").should("not.exist");
