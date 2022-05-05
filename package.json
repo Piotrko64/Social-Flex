@@ -19,6 +19,7 @@
         "bcryptjs": "^2.4.3",
         "concurrently": "^7.1.0",
         "cypress": "^9.6.0",
+        "cypress-file-upload": "^5.0.8",
         "emoji-picker-react": "^3.5.1",
         "firebase": "^9.6.11",
         "formik": "^2.2.9",
